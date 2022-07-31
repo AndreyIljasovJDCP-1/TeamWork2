@@ -61,7 +61,6 @@ class Main {
         for (int i = 0; i < basket.length; i++) {
 
             if (basket[i] > 0) {
-                System.out.println(products[i] + " " + basket[i] + " шт " + price[i] + " руб/шт " + (basket[i] * price[i]) + " рублей в сумме");
                 boolean discount = false;
 
                 if (basket[i] != 0) {
@@ -81,10 +80,9 @@ class Main {
                         sumProducts += basket[i] * price[i];
                     }
                 }
-
             }
-            System.out.println("Итого: " + sumProducts);
         }
+        System.out.println("Итого: " + sumProducts);
     }
 }
 
