@@ -6,7 +6,7 @@ class Main {
 
         String[] products = {"Молоко", "Гречка", "Пшеница", "Масло"};
         String[] productsStock = {"Гречка", "Масло"};
-        int[] price = {50, 68, 45, 120};
+        int[] price = {50, 70, 30, 120};
         int[] basket = new int[products.length];
         int sumProducts = 0;
 
@@ -18,6 +18,7 @@ class Main {
                 System.out.println((i + 1) + ": " + products[i] + " " + price[i] + " руб/шт.");
             }
             System.out.println("В акции 3 по цене 2-х участвуют товары: " + Arrays.toString(productsStock));
+            System.out.println("Введите код товара и количество через пробел. Для выхода введите end.");
             String input = scanner.nextLine();
 
             if (input.equals("end")) {
@@ -28,6 +29,7 @@ class Main {
             String[] stringsInput = input.split(" ");
 
             if (stringsInput.length != 2) {
+                System.out.println("Введены некорректные данные");
                 continue;
             }
 
