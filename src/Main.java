@@ -66,9 +66,9 @@ class Main {
                 boolean discount = false;
 
                 if (basket[i] != 0) {
-                    for (int j = 0; j < productsStock.length; j++) {
+                    for (String s : productsStock) {
 
-                        if (products[i].equals(productsStock[j])) {
+                        if (products[i].equals(s)) {
                             discount = true;
                             int actionSum = ((basket[i] - basket[i] % 3) * price[i] * 2) / 3 + basket[i] % 3 * price[i];
                             sumProducts += actionSum;
