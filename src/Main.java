@@ -65,7 +65,6 @@ class Main {
             if (basket[i] > 0) {
                 boolean discount = false;
 
-                if (basket[i] != 0) {
                     for (String s : productsStock) {
 
                         if (products[i].equals(s)) {
@@ -75,12 +74,10 @@ class Main {
                             System.out.println(products[i] + " " + basket[i] + " шт " + price[i] + " руб/шт " + actionSum + " рублей в сумме");
                             break;
                         }
-                    }
-
-                    if (!discount) {
-                        System.out.println(products[i] + " " + basket[i] + " шт " + price[i] + " руб/шт " + (basket[i] * price[i]) + " рублей в сумме");
-                        sumProducts += basket[i] * price[i];
-                    }
+                }
+                if (!discount) {
+                    System.out.println(products[i] + " " + basket[i] + " шт " + price[i] + " руб/шт " + (basket[i] * price[i]) + " рублей в сумме");
+                    sumProducts += basket[i] * price[i];
                 }
             }
         }
